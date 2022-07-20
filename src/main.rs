@@ -55,12 +55,12 @@ pub fn main() {
     let video_subsystem = sdl_context.video().unwrap();
     let ttf_context = sdl2::ttf::init().expect("TTF could not initialise");
     
-    let window = video_subsystem.window("rust-sdl2 demo", WIDTH, HEIGHT)
+    let window = video_subsystem.window("Rust Pong", WIDTH, HEIGHT)
         .position_centered()
         .build()
         .unwrap();
 
-        // NOTE: To switch between VSync and a fixed/target FPS, I need to recreate the canvas
+    // NOTE: To switch between VSync and a fixed/target FPS, I need to recreate the canvas
     let mut canvas = window
         .into_canvas()
         .accelerated()
